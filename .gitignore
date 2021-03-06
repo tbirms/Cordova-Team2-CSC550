@@ -1,13 +1,19 @@
 # Ignore everything
 *
 
-# But not these...
+# Except these repository files...
 !README.md
 !.gitignore
 !LICENSE
 
-!*/node_modules/
-!*/www/
-!*/config.xml
-!*/package-lock.json
-!*/package.json
+# Except these projects...
+!soundRecorder/
+!cordova-exhibition/
+
+# Except these directories (affects all projects)...
+!node_modules/
+!plugins/
+!www/
+!config.xml
+!package-lock.json
+!package.json
