@@ -1,0 +1,8 @@
+# Ignore platforms directories
+*/platforms
+
+# Ignore file system files
+.DS_Store
+
+# Ignore workspace files
+*.code-workspace
