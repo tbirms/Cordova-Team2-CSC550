@@ -1,5 +1,7 @@
-# Ignore platforms directories
-*/platforms
+# Ignore node package manager files
+*/node_modules
+*/package-lock.json
+*/package.json
 
 # Ignore file system files
 .DS_Store
