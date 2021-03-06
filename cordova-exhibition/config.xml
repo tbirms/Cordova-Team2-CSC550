@@ -9,4 +9,42 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <platform name="android">
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <!-- Set User Agent on iPad as mobile when InAppBrowsing -->
+        <preference name="PreferredContentMode" value="mobile" />
+        <!-- Persistant File Location -->
+        <preference name="iosPersistentFileLocation" value="Library" />
+        <!-- Usage Description for Microphone -->
+        <edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need microphone access to record sounds</string>
+        </edit-config>
+        <!-- Usage Descriptions for Camera-->
+        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need camera access to take pictures</string>
+        </edit-config>
+        <!-- Usage Description for Photos -->
+        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need photo library access to get pictures from there</string>
+        </edit-config>
+        <!-- Usage Description for Contacts -->
+        <edit-config target="NSContactsUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need contacts access to view contacts</string>
+        </edit-config>
+        <!-- Usage Descriptions for Location -->
+        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need location access to find things nearby</string>
+        </edit-config>
+        <edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need location access to find things nearby</string>
+        </edit-config>
+        <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need location access to find things nearby</string>
+        </edit-config>
+    </platform>
 </widget>
