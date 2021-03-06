@@ -3,6 +3,9 @@
 */package-lock.json
 */package.json
 
+# Ignore platforms
+*/platforms
+
 # Ignore file system files
 .DS_Store
 
