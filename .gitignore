@@ -1,19 +1,8 @@
-# Ignore everything
-*
+# Ignore platforms directories
+*/platforms
 
-# Except these repository files...
-!README.md
-!.gitignore
-!LICENSE
+# Ignore file system files
+.DS_Store
 
-# Except these projects...
-!soundRecorder/
-!cordova-exhibition/
-
-# Except these directories (affects all projects)...
-!node_modules/
-!plugins/
-!www/
-!config.xml
-!package-lock.json
-!package.json
+# Ignore workspace files
+*.code-workspace
