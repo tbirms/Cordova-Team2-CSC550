@@ -17,7 +17,7 @@ var NotificationManager = (function () {
               navigator.notification.beep(times);
           },
           vibrate: function (milliseconds) {
-              navigator.notification.vibrate(milliseconds);
+              navigator.vibrate(milliseconds);
           }          
       };
   };
