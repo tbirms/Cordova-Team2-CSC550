@@ -5,7 +5,7 @@ var InAppBrowserManager = (function () {
   function createObject() {
       return {
           openWindow: function (url) {
-              var windowRef = window.open(url, '_blank', 'location=no');
+              var windowRef = cordova.InAppBrowser.open(url, '_blank', 'location=yes');
               
               return windowRef; 
           },

@@ -7,7 +7,7 @@
         $("#openGoogleSearchPage").on("tap", function(e) {
             e.preventDefault();
  
-            var windowRef = inAppBrowserManager.openWindow("http://www.google.com");    
+            var windowRef = inAppBrowserManager.openWindow("https://www.google.com");    
 
             //Close the window after 10 seconds ...
             window.setTimeout(function() {
