@@ -12,7 +12,7 @@ var ContactsManager = (function () {
               
               var fields = ["id", "name", "phoneNumbers"];
               
-              navigator.contacts.find(callback.onSuccess, callback.onError, fields, options);
+              navigator.contacts.find(fields, callback.onSuccess, callback.onError, options);
           }
       };
   };
