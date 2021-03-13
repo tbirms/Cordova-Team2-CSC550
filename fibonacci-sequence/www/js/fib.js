@@ -10,7 +10,7 @@ function displayAllPositions (n) {
         n2 = nextTerm;
         var end = performance.now();
 
-        document.getElementById("textDisplay").innerHTML += " (" + (end - start).toFixed(3) + " ms)";
+        document.getElementById("textDisplay").innerHTML += " (" + parseFloat((end - start).toFixed(3)) + " ms)";
         if (n1 != 0 && i != position -1) {
             document.getElementById("textDisplay").innerHTML += ", ";
         }
@@ -27,7 +27,7 @@ function displayCurrentPosition(n) {
       arr.push(arr[i - 2] + arr[i -1])
     }
     var end = performance.now();
-    document.getElementById("textDisplay").innerHTML += (arr[n-1]) + " (" + (end - start).toFixed(3) + " ms)";
+    document.getElementById("textDisplay").innerHTML += (arr[n-1]) + " (" + parseFloat((end - start).toFixed(3)) + " ms)";
 
 };
 
@@ -62,7 +62,7 @@ document.getElementById("Calculate Position").addEventListener("click", function
     }
     else if (n==1) {
         var end = performance.now();
-        document.getElementById("textDisplay").innerHTML += 0 + " (" + (end - start).toFixed(3) + " ms)";
+        document.getElementById("textDisplay").innerHTML += 0 + " (" + parseFloat((end - start).toFixed(3)) + " ms)";
     }
     else {
         displayCurrentPosition(n);
