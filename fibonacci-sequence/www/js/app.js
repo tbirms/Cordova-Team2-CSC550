@@ -1,35 +1,49 @@
 function displayAllPositions (n) {
     let position = n;
     let n1 = 0, n2 = 1, nextTerm;
-    var start = performance.now();
-
+    var start, end, total;
+    var message = "";
+    
+    // start the clock! 
+    start = performance.now(); // NOTE: WebKit Browser Engine (iOS) only supports resolution of 1ms>
     for (let i = 0; i < position; i++) {
-        document.getElementById("textDisplay").innerHTML += n1;
+        message += n1;
         nextTerm = n1 + n2;
         n1 = n2;
         n2 = nextTerm;
-        var end = performance.now();
+        end = performance.now();
 
-        document.getElementById("textDisplay").innerHTML += " (" + parseFloat((end - start).toFixed(3)) + " ms)";
+        message += " (" + parseFloat((end - start).toFixed(5)) + " ms)";
         if (n1 != 0 && i != position -1) {
-            document.getElementById("textDisplay").innerHTML += ", ";
+            message += ", ";
         }
 
     }
-    var total = performance.now();
-    document.getElementById("textDisplay").innerHTML += "<br><br>Total Time: " + parseFloat((total - start).toFixed(3)) + " ms";
+    total = performance.now();
+
+    // display results
+    message += "<br><br>Total Time: " + parseFloat((total - start).toFixed(5)) + " ms";
+    document.getElementById("textDisplay").innerHTML = message;
 
 };
 
 function displayCurrentPosition(n) {
     let arr = [0, 1];
-    var start = performance.now();
-
+    var start, end;
+    var time;
+    var message = "";
+    
+    // start the clock! 
+    start = performance.now(); // NOTE: WebKit Browser Engine (iOS) only supports resolution of 1ms>
     for (let i = 2; i < n + 2; i++){
       arr.push(arr[i - 2] + arr[i -1])
     }
-    var total = performance.now();
-    document.getElementById("textDisplay").innerHTML += (arr[n-1]) + " (" + parseFloat((total - start).toFixed(3)) + " ms)<br><br>Total Time: " + parseFloat((total - start).toFixed(3)) + " ms";
+    end = performance.now();
+    time = parseFloat((end - start).toFixed(5));
+
+    // display results
+    message = (arr[n-1]) + " (" + time + " ms)<br><br>Total Time: " + time + " ms";
+    document.getElementById("textDisplay").innerHTML += message;
 
 };
 
