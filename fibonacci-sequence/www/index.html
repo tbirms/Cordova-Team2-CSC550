@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="jqueryMobile/jquery.mobile-1.4.0.min.css">
+        <script src="jqueryMobile/jquery-1.10.2.min.js"></script>
+        <script src="jqueryMobile/jquery.mobile-1.4.0.min.js"></script>
+        <title>Fibbonacci Calculator</title>
+    </head>
+    <body>
+        <div data-role="page" id="main" style="background-color: #a6c2ff">
+            <div data-role="header" style="background-color: #a6c2ff">
+               <center> <h2 style="font-size:40px;">SCSU - CSC550</h2></center>
+               <center> <p style="color: rgb(255, 72, 0);">Team 2 Fibbnonacci Calculator - DavTomRobJoy</p></center>
+            </div>
+            <div data-role="content">
+            <div data-role="fieldcontain">
+               <center> <h1>Welcome to the Team 2 Fibbonacci Calculator Application</h1></center>
+                <p>Click "Calculate 50" to display the first 50 values in the fibbonaacci sequnece.  Enter a number and Click "Calculate N" to display the values of the Fibbonacci sequence up to that number.  Enter a number and Click "Calculate Position" To display the value at that point in the Fibbnonacci Sequence.<br/><br/></p>
+                <input type="hidden" id="location"/>
+                <div class="center-wrapper">
+                    <input type="number" id="inputValue" placeholder="Enter a Number" style="text-align: center"/>
+                    <input type="button" id="Calculate 50" value="Calculate 50" class="center-button" datainline="true"/>
+                    <input type="button" id="Calculate N" value="Calculate N" class="center-button" datainline="true"/>
+                    <input type="button" id="Calculate Position" value="Calculate Position" class="center-button" datainline="true"/>
+                </div>
+                <div id="textDisplay">
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" style="background-color: #a6c2ff">
+                <center> <h1>Powered by Apache Cordova</h1></center>
+            </div>
+        </div>
+        <script src="cordova.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
